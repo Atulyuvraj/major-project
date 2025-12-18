@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<body>
+    
+    <div id="filters">
+      <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-filter"></i>
+        <p>Filter</p>
+      </div>
+      <div class="filter">
+       <i class="fa-solid fa-table"></i>
+        <p>Calander</p>
+      </div>
+      <div class="filter">
+       <i class="fa-regular fa-chess-king"></i>
+        <p>Castel</p>
+      </div>
+      <div class="filter">
+       <i class="fa-solid fa-mountain"></i>
+        <p>Mountain</p>
+      </div>
+       <div class="filter">
+      <i class="fa-solid fa-person-swimming"></i>
+        <p>Swimming</p>
+      </div>
+       <div class="filter">
+       <i class="fa-solid fa-parachute-box"></i>
+        <p>Advanture</p>
+      </div>
+       <div class="filter">
+       <i class="fa-solid fa-screwdriver-wrench"></i>
+        <p>Amazing tools</p>
+      </div>
+    </div>
+    
+    
+      <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1"> <% for(let list of alllists){ %>
+        <a href="/listings/<%= list._id%>" class="links">   <div class="card col " >
+  <img src="<%=list.image.url%>" class="card-img-top" alt="..." style="height: 20rem;">
+   <div class="card-img-overlay">
+    <h5 class="card-title"><%= list.title %></h5>
+    <p class="card-text"></p>
+    <p class="card-text"><small></small></p>
+  </div>
+  <div class="card-body">
+    <p class="card-text" >
+      <b >  <%= list.title %><br /></b>
+        &#8377; <%= list.price %>/Night
+    </p>
+  </div>
+</div></a> 
+        <% } %> </div>
+           
+    
+   
+</body>
+</html>

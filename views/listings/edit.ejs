@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2>EDIT YOUR LISTINGS:</h2>
+     <form method="POST" action="/listings/<%= list2._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+         <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+        <input name="title" value="<%=list2.title%> "type="text" class="form-control" required>
+        <div class="valid-feedback">Tittle looks good!</div>
+        
+        </div>
+        <br />
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+        <textarea name="description" class="form-control" type="text" required> <%=list2.description%></textarea>
+        <div class="invalid-feedback">Please enter a short discription</div>
+        </div>
+        <br />
+        <div class="mb-3">
+             <label for="price" class="form-label">price</label>
+        <input name="price" value="<%=list2.price%>" type="number" class="form-control" required>
+        <div class="invalid-feedback">Please enter the price</div>
+        </div>
+        <br  />
+            
+           <div class="mb-3">
+              <label for="image" class="form-label">image/url</label>
+          <input name="image" type="file"  placeholder="enter the image/url" class="form-control" >
+           </div>
+          <br/>
+          <div class="mb-3">
+            <label for="location" class="form-label">location</label>
+        <input name="location" value="<%=list2.location%>" type="text" class="form-control" required >
+        <div class="invalid-feedback">Please enter a valid location</div>
+          </div>
+        <br />
+        <div class="mb-3">
+            <label for="country" class="form-label">country</label>
+        <input name="country" value="<%=list2.country%>" type="text" required>
+        <div class="invalid-feedback">Please enter a valid country name</div>
+        </div>
+        <br />
+        <button class="btn btn-dark add-btn">submit</button>
+    </form>
+</body>
+</html>

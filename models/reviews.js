@@ -1,0 +1,23 @@
+
+const mongoose=require("mongoose")
+const { type } = require("requests")
+const { max, min } = require("../schema")
+const User=require("./user.js")
+const reviewSchema=mongoose.Schema({
+    comment:String,
+    rating:{
+        type:Number,
+        min:1,
+        max:5
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now()
+    },
+    author:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    }
+})
+const Review=mongoose.model("Review",reviewSchema)
+module.exports=Review;
