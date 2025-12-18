@@ -24,7 +24,8 @@ const flash=require("connect-flash")
 const passport=require("passport")
 const LocalStrategy=require("passport-local")
 const User=require("./models/user.js")
-const url="mongodb+srv://delta-student:IJ6RZIuUsr6SPwP1@cluster0.wfx0etw.mongodb.net/?appName=Cluster0"
+const url="mongodb+srv://delta-student:IJ6RZIuUsr6SPwP1@cluster0.wfx0etw.mongodb.net/?appName=Cluster0";
+const axios=require("axios")
 
 
 
