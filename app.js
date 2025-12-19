@@ -74,25 +74,9 @@ app.use("/",listingss)
 app.use("/",reviewss)
 app.use("/",userss  )
 
-app.get("/demo",async (req,res)=>{
-    let fake= new User({
-        email:"yuvraj@gamil.com",
-        username:"Atul1"
-    })
-    let result= await User.register(fake,"helloworld")
-    res.send(result)
+app.get("/",(req,res)=>{
+    res.send("welcome")
 })
-app.get("/testing",wrapAsync(async(req,res)=>{
-    const newL=new List({
-        title:"My new villa",
-        discription:"By the beach",
-        price:1200,
-        location:"Goa",
-        country:"India",
-    });
-   await newL.save();
-   res.send("testing sucessfull")
-}));
 
 app.get("/cookies",(req,res)=>{
    let {name}=req.cookies
