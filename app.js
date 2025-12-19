@@ -8,7 +8,7 @@ const List=require("./models/listing.js");
 const path=require("path");
 const methodOverride = require("method-override");
 const ejsMate=require("ejs-mate");
-const Chat = require("../Mongo3/models/chat.js");
+
 const ExpressError=require("./utils/ExpressError.js");
 const {listSchema}=require("./schema.js")
 const Review=require("./models/reviews.js")
